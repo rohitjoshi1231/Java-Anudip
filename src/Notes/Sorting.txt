@@ -1,3 +1,20 @@
 // Sorting
 
 Definition : Arranging in a particular sequence
+
+
+// MultiDimen
+
+// Declaration
+int[][] array = new int[2][5];
+                        |  |
+                      row column
+int[][] array2 = new int[][]{
+                        {1,2},
+                        {2,3},
+                        {3,4}
+                        }
+
+// Jagged Array
+We will tell the column number afterwords
+

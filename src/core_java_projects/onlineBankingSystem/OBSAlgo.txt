@@ -1,0 +1,105 @@
+## Online Banking System
+Description: Create a basic banking application that supports account creation
+balance inquiry, deposit, withdrawal, and transfer between accounts.
+
+Automatic date Addition
+
+Fields and their data types
+-- Name: String
+-- contact number: String
+-- Aadhaar card number/ pan card number : String
+-- Age: Int
+-- Gender: Boolean
+-- final Account Number: String
+-- Amount: Int
+-- Branch[] : String
+
+## Account creation Model
+:Input
+Name
+Phone number
+id proof (Aadhaar card number/ pan card number)
+age
+gender
+--Date
+::Output
+Account number
+
+## Error Cases for account creation model
+
+--AlL fields are required
+--age shouldn't be negative
+--contact number should be 10 digit
+--Name should match with id proof
+--Aadhaar card digits should be matched
+--contact number and aadhaar number shouldn't be String or double
+
+
+## Balance Inquiry Model
+:Input
+Account number
+--Date
+::Output
+Balance
+
+## Error Cases for Balance Inquiry model
+-- Account number digit match
+-- Account not a string or char
+
+
+## Deposit Model
+:Input
+Account number
+Amount
+Branch
+--Date
+::Output
+Msg : Successfully deposited
+
+## Error Cases for Deposit Model
+-- Account number digit match
+-- Account, Amount not a string or char
+-- Amount can't be negative
+
+withdrawal Model
+:Input
+Account number
+Amount
+Branch
+--Date
+::Output
+Amount
+
+## Error Cases for withdrawal Model
+-- Account number digit match
+-- Account, Amount not a string or char
+-- Amount can't be negative
+
+transfer between accounts model
+:Input
+Sender Account number
+Receiver Account number
+Amount
+Branch
+Receiver account amount should add
+sender account amount minus
+::Output
+Msg: Amount transfer success
+
+## Error Cases for transfer between accounts Model
+-- Account number digit match
+-- Account, Amount not a string or char
+-- Amount can't be negative
+-- Sender account should have more than 0 rs
+
+Encapsulation: Secure account data with private fields and getter/setter methods.
+Multithreading: Simulate concurrent transactions.
+Collections: Store and manage account details.
+Interface or abstract class for common bank operations like deposit(), withdraw(), and transfer().
+
+Classes
+class 1: Account Creation
+class 2: Balance Inquiry
+class 3: Deposit
+class 4: Withdrawal
+class 5: Amount Transfer
